@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -25,18 +26,39 @@
             },
         }
     </script>
+    <style>
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .force-small-hero h1 {
+            font-family: 'JetBrains Mono', Monaco, SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace !important;
+            font-size: 2.25rem !important; /* text-4xl */
+            line-height: 2.5rem !important;
+            overflow: visible !important;
+            white-space: normal !important;
+        }
+        .force-small-hero {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            min-height: auto !important;
+        }
+        .force-small-hero h1 {
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body class="font-mono antialiased">
-    <div class="min-h-screen">
-        <main class="px-6 mx-auto max-w-4xl pt-20 md:pt-32">
-            <img src="media/kata_portrait.png" 
-                 alt="Kata Pujol" 
-                 class="w-[225px] rounded-xl mb-8"
-            >
-            <h1 class="text-3xl font-bold mb-8">
-                Kata Pujol
-            </h1>
-            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+    <div class="min-h-screen px-6 md:px-16 w-full max-w-none">
+        <main class="pt-20 md:pt-32">
+            <div id="hero-section" class="flex flex-col lg:flex-row lg:items-center gap-8 mb-8 min-h-[225px]">
+                <img src="media/kata_portrait.png" 
+                     alt="Kata Pujol" 
+                     class="w-[225px] rounded-xl mb-8 lg:mb-0"
+                >
+                <h1 class="font-mono text-4xl font-bold text-left flex-1 flex items-center truncate whitespace-nowrap lg:font-inter lg:text-[clamp(60px,15vw,200px)] lg:leading-[1] lg:overflow-visible lg:truncate" style="height:auto;">
+                    Kata Pujol
+                </h1>
+            </div>
+            <p class="text-lg text-gray-700 mb-8 leading-relaxed text-left">
                 I build and lead products with an emphasis on focus, speed, and craft. I have more than a decade of experience working on globally scaled and zero to one AI-powered healthcare products in deeply regulated environments across the US and Europe.
             </p>
             <div class="flex gap-4 mt-8">
@@ -51,13 +73,13 @@
             </div>
         </main>
 
-        <div class="px-6 mx-auto max-w-4xl">
+        <div>
             <hr class="my-16 border-t border-gray-200" aria-hidden="true">
         </div>
 
-        <div class="px-6 mx-auto max-w-4xl content-below">
+        <div class="w-full">
             <section id="work" class="mb-16">
-                <h2 class="text-3xl font-bold mb-6">Work</h2>
+                <h2 class="text-3xl font-bold mb-6 text-left">Work</h2>
                 <div class="space-y-8">
                     <div class="group">
                         <div class="flex flex-col">
@@ -153,28 +175,32 @@
                 </a>
             </section>
 
+            <!-- Projects -->
             <section id="projects" class="mb-16 section">
-                <h2 class="text-3xl font-bold mb-6">Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <h2 class="text-3xl font-bold mb-6 text-left">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Coming Soon -->
                     <div class="p-4 border border-gray-200 rounded-lg flex flex-col gap-2">
                         <div>
-                            <h3 class="font-semibold">Coming Soon...</h3>
-                            <p class="text-gray-600 text-sm">Multi-disciplinary team evidence based communication tool</p>
+                            <h3 class="font-semibold mb-4">Projects I'm Exploring...</h3>
+                            <p class="text-gray-600 text-sm mb-4">Multi-disciplinary team evidence based communication tool</p>
+                            <p class="text-gray-600 text-sm mb-4">Clinical conversation to billing code mapping platform</p>
                         </div>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 mt-0">
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">XXX</span>
                         </div>
                     </div>
-                    
+
+                    <!-- Clinical AI Notes -->
                     <a href="clinical-ai-notes.html" 
                        class="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex flex-col gap-2"
                        target="_blank"
                        rel="noopener noreferrer">
                         <div>
-                            <h3 class="font-semibold">Clinical AI Notes</h3>
-                            <p class="text-gray-600 text-sm">AI-generated, clinical notes from free text and audio notes for second opinions, specialty guidance, and referrals</p>
+                            <h3 class="font-semibold mb-4">Clinical AI Notes</h3>
+                            <p class="text-gray-600 text-sm mb-4">AI-generated, clinical notes from free text and audio notes for second opinions, specialty guidance, and referrals</p>
                         </div>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 mt-0">
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">LLM summarization</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Second opinions</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Structured notes</span>
@@ -182,16 +208,17 @@
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Clinical guidance</span>
                         </div>
                     </a>
-                    
+
+                    <!-- Pharma Market Research Phone Agent -->
                     <a href="https://drive.google.com/file/d/1DNmXTVTRdhhChIewYFszbuW3FMP_dm1E/view" 
                        class="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex flex-col gap-2"
                        target="_blank"
                        rel="noopener noreferrer">
                         <div>
-                            <h3 class="font-semibold">Pharma Market Research Phone Agent</h3>
-                            <p class="text-gray-600 text-sm">Medically-trained voice agent that probes and summarizes market research calls</p>
+                            <h3 class="font-semibold mb-4">Pharma Market Research Phone Agent</h3>
+                            <p class="text-gray-600 text-sm mb-4">Medically-trained voice agent that probes and summarizes market research calls</p>
                         </div>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 mt-0">
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Voice transcription</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Probing</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Call analysis</span>
@@ -200,15 +227,16 @@
                         </div>
                     </a>
 
+                    <!-- Transparency in Cost -->
                     <a href="transparency-in-cost.html" 
                        class="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex flex-col gap-2"
                        target="_blank"
                        rel="noopener noreferrer">
                         <div>
-                            <h3 class="font-semibold">Transparency in Cost</h3>
-                            <p class="text-gray-600 text-sm">Estimated patient costs based on complex insurance structures and service type</p>
+                            <h3 class="font-semibold mb-4">Transparency in Cost</h3>
+                            <p class="text-gray-600 text-sm mb-4">Estimated patient costs based on complex insurance structures and service type</p>
                         </div>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 mt-0">
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Compliance</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Price transparency</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Cost estimation</span>
@@ -217,15 +245,16 @@
                         </div>
                     </a>
 
+                    <!-- Patient Experience Platform -->        
                     <a href="https://drive.google.com/file/d/1DNmXTVTRdhhChIewYFszbuW3FMP_dm1E/view" 
                        class="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex flex-col gap-2"
                        target="_blank"
                        rel="noopener noreferrer">
                         <div>
-                            <h3 class="font-semibold">Patient Experience Platform</h3>
-                            <p class="text-gray-600 text-sm">Configurable mobile and desktop platform for seamless appointment and care access</p>
+                            <h3 class="font-semibold mb-4">Patient Experience Platform</h3>
+                            <p class="text-gray-600 text-sm mb-4">Configurable mobile and desktop platform for seamless appointment and care access</p>
                         </div>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 mt-0">
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">EHR integration</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Appointment optimation</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">MVP Pilot & Launch</span>
@@ -233,16 +262,17 @@
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Foundational Partnerships</span>
                         </div>
                     </a>
-                    
+
+                    <!-- Intelligent Appointment Management -->
                     <a href="https://help.salesforce.com/s/articleView?id=ind.set_up_intelligent_appointment_management.htm&type=5" 
                        class="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex flex-col gap-2"
                        target="_blank"
                        rel="noopener noreferrer">
                         <div>
-                            <h3 class="font-semibold">Intelligent Appointment Management</h3>
-                            <p class="text-gray-600 text-sm">Centralized complex scheduling with predictive, configurable logic and workflow</p>
+                            <h3 class="font-semibold mb-4">Intelligent Appointment Management</h3>
+                            <p class="text-gray-600 text-sm mb-4">Centralized complex scheduling with predictive, configurable logic and workflow</p>
                         </div>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 mt-0">
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">EHR integration</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Predictive scheduling</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Self-service booking</span>
@@ -250,16 +280,17 @@
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Multi-resource coordination</span>
                         </div>
                     </a>
-                    
+
+                    <!-- Remote Monitoring -->
                     <a href="https://help.salesforce.com/s/articleView?id=ind.admin_remote_monitoring.htm&type=5" 
                        class="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors flex flex-col gap-2"
                        target="_blank"
                        rel="noopener noreferrer">
                         <div>
-                            <h3 class="font-semibold">Remote Monitoring</h3>
-                            <p class="text-gray-600 text-sm">Tracked biometrics and triggered care alerts from wearables</p>
+                            <h3 class="font-semibold mb-4">Remote Monitoring</h3>
+                            <p class="text-gray-600 text-sm mb-4">Tracked biometrics and triggered care alerts from wearables</p>
                         </div>
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 mt-0">
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">EHR integration</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Data lake</span>
                             <span class="px-2 py-0.5 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">Biometric tracking</span>
@@ -271,7 +302,7 @@
             </section>
 
             <section id="education" class="mb-16 section">
-                <h2 class="text-3xl font-bold mb-6">Education</h2>
+                <h2 class="text-3xl font-bold mb-6 text-left">Education</h2>
                 <ul class="space-y-2">
                     <li>
                         Dartmouth College - BA in Chemistry & Anthropology
@@ -289,7 +320,7 @@
             </section>
 
             <section id="musings" class="mb-16 section">
-                <h2 class="text-3xl font-bold mb-6">Musings</h2>
+                <h2 class="text-3xl font-bold mb-6 text-left">Musings</h2>
                 <div class="grid gap-4">
                     <a href="https://katharinepujol.notion.site/Opportunity-Investment-Framework-For-AI-in-Healthcare-1e61242163ff80669a6ef535032b1064?pvs=4" 
                        class="p-6 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors section"
@@ -302,5 +333,22 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+    function checkHeroOverflow() {
+        const hero = document.getElementById('hero-section');
+        const h1 = hero.querySelector('h1');
+        // Remove force-small-hero to test large layout
+        hero.classList.remove('force-small-hero');
+        // Only check on large screens
+        if (window.innerWidth >= 1024) {
+            // If h1 is overflowing its container, force small layout
+            if (h1.scrollWidth > h1.clientWidth || h1.offsetHeight > hero.offsetHeight) {
+                hero.classList.add('force-small-hero');
+            }
+        }
+    }
+    window.addEventListener('resize', checkHeroOverflow);
+    window.addEventListener('DOMContentLoaded', checkHeroOverflow);
+    </script>
 </body>
 </html> 
