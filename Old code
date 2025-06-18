@@ -1,0 +1,139 @@
+!-- About Section (1-column) -->
+<section class="mb-16">
+  <h2 class="text-3xl font-bold mb-6 text-left">I help AI healthcare startups ship innovation faster, smarter, and fully compliant. </h2>
+  <p class="text-lg text-gray-700 mb-8 leading-relaxed text-left">
+    Today, I partner with founders and executive teams to bring their ideas to life and to super charge their existing products to become enterprise-grade. I can step in at ground zero to find product market fit or at critical growth phases. As a product leader, I will:
+  </p>
+  <div class="space-y-2 mb-8">
+    <div class="bg-gray-50 rounded-lg">
+      <button type="button" class="w-full flex justify-between items-center px-4 py-3 text-left text-lg text-gray-700 font-medium focus:outline-none" onclick="toggleDetail(this)">
+        Define product strategy to drive business impact and investor confidence
+        <span class="ml-2 transition-transform duration-200">&#9660;</span>
+      </button>
+      <div class="px-6 pb-4 text-gray-600 text-base hidden">
+        I partner with executives to define a vision-aligned, market-driven, and resource-focused product strategy. I leverage my own frameworks to refine unstructured visions into product strategy and evangelize it.
+      </div>
+    </div>
+    <div class="bg-gray-50 rounded-lg">
+      <button type="button" class="w-full flex justify-between items-center px-4 py-3 text-left text-lg text-gray-700 font-medium focus:outline-none" onclick="toggleDetail(this)">
+        Quickly identify and test small wins and big opportunities via high-fi prototyping and testing
+        <span class="ml-2 transition-transform duration-200">&#9660;</span>
+      </button>
+      <div class="px-6 pb-4 text-gray-600 text-base hidden">
+        I leverage my opportunity assessment frameworks and market knowledge to identify big opportunities to pursue, get stakeholder buy-in and then collaborate directly with research, engineering, and design teams to validate ideas, test, and iterate swiftly. I conduct weekly updates with executives to ensure alignment and progress. 
+      </div>
+    </div>
+    <div class="bg-gray-50 rounded-lg">
+      <button type="button" class="w-full flex justify-between items-center px-4 py-3 text-left text-lg text-gray-700 font-medium focus:outline-none" onclick="toggleDetail(this)">
+        Hire and lead product, engineering, and design teams
+        <span class="ml-2 transition-transform duration-200">&#9660;</span>
+      </button>
+      <div class="px-6 pb-4 text-gray-600 text-base hidden">
+        I source, interview, and hire top talent and nurture a culture of high performance and experimentation with proven operational frameworks. I also foster collaboration between product teams with clinical and legal stakeholders to ensure compliance without sacrificing speed.
+      </div>
+    </div>
+    <div class="bg-gray-50 rounded-lg">
+      <button type="button" class="w-full flex justify-between items-center px-4 py-3 text-left text-lg text-gray-700 font-medium focus:outline-none" onclick="toggleDetail(this)">
+        Build and scale high-impact AI products from 0 → 1 and beyond by living in the details
+        <span class="ml-2 transition-transform duration-200">&#9660;</span>
+      </button>
+      <div class="px-6 pb-4 text-gray-600 text-base hidden">
+        I collaborate with engineering teams to craft future-proof scalable architectures and implement proven operational frameworks that inspire resilient and growth-focused products and teams.
+      </div>
+    </div>
+    <div class="bg-gray-50 rounded-lg">
+      <button type="button" class="w-full flex justify-between items-center px-4 py-3 text-left text-lg text-gray-700 font-medium focus:outline-none" onclick="toggleDetail(this)">
+        Redefine product roadmaps to align with strategic goals 
+        <span class="ml-2 transition-transform duration-200">&#9660;</span>
+      </button>
+      <div class="px-6 pb-4 text-gray-600 text-base hidden">
+        I navigate pivots with confidence, ensuring alignment with business objectives and regulatory changes.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Innovation & Enterprise Section (2-column) -->
+<section class="mb-16">
+  <div class="flex flex-col lg:flex-row lg:items-start gap-2 lg:gap-8">
+    <div class="flex-1 lg:pl-0 lg:pr-6 mb-8 lg:mb-0">
+      <h3 class="text-2xl font-bold mb-2 text-left">Bringing Innovation to Life</h3>
+      <p class="text-base text-gray-700 mb-4 leading-relaxed text-left">
+        I can operate in zero-to-one environments—turning ambiguity into clarity and raw ideas into live products.
+      </p>
+      <ul class="mb-4 space-y-1 text-base text-gray-700">
+        <li>🧠 Customer discovery</li>
+        <li>🎯 Experimental mindset</li>
+        <li>🛠 Scrappy prototyping</li>
+        <li>🚀 Vision & prioritization clarity</li>
+        <li>💼 Founder mentality</li>
+        <li>🎤 Storytelling</li>
+      </ul>
+      <a href="XXX" class="inline-flex items-center text-base font-semibold text-blue-700 hover:underline">
+        → Seen in action: Pando (ambient AI scribe), Tendo (EHR-integrated apps + patient UX)
+      </a>
+    </div>
+    <div class="flex-1 lg:pl-6">
+      <h3 class="text-2xl font-bold mb-2 text-left">Upleveling to Enterprise-Grade</h3>
+      <p class="text-base text-gray-700 mb-4 leading-relaxed text-left">
+        I scale products by building platforms, tightening operations, and aligning product with enterprise buyers and systems.
+      </p>
+      <ul class="mb-4 space-y-1 text-base text-gray-700">
+        <li>🔍 Systemic thinking</li>
+        <li>🧱 Platform mindset</li>
+        <li>📏 Operational rigor</li>
+        <li>💬 Enterprise sales fluency</li>
+        <li>🔁 Repeatability & scale design</li>
+      </ul>
+      <a href="XXX" class="inline-flex items-center text-base font-semibold text-blue-700 hover:underline">
+        → Seen in action: Salesforce Health Cloud (remote monitoring escalation engine), Amino Health (payer cost prediction + onboarding tools)
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Work in Progress Section (Hidden by default) -->
+<section class="mb-16 hidden" id="work-in-progress">
+    <div class="flex flex-col lg:flex-row lg:items-start gap-2 lg:gap-8">
+      <h2 class="text-3xl font-bold min-w-[180px] lg:text-left lg:pt-1 flex-shrink-0 lg:w-1/4 lg:pl-0">
+        Work in Progress
+      </h2>
+      <div class="flex-1 lg:pl-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <div class="text-gray-400 text-xl font-mono mb-2">01</div>
+            <div class="font-bold mb-1 text-lg">Shared ownership</div>
+            <div class="text-gray-700 text-base">Whether I work independently or integrate with your team, everyone comes along the process.</div>
+          </div>
+          <div>
+            <div class="text-gray-400 text-xl font-mono mb-2">02</div>
+            <div class="font-bold mb-1 text-lg">I work fast, like <span class='italic'>really</span> fast</div>
+            <div class="text-gray-700 text-base">Quick iteration allows us to zoom through explorations until we arrive at something that feels just right.</div>
+          </div>
+          <div>
+            <div class="text-gray-400 text-xl font-mono mb-2">03</div>
+            <div class="font-bold mb-1 text-lg">Show and tell</div>
+            <div class="text-gray-700 text-base">I frequently share work in progress, usually in the form of screen recordings with a voice over.</div>
+          </div>
+          <div>
+            <div class="text-gray-400 text-xl font-mono mb-2">04</div>
+            <div class="font-bold mb-1 text-lg">Bias for action</div>
+            <div class="text-gray-700 text-base">I prefer creating tangible artifacts to visualize the team's ideas over lengthy documents that often go ignored.</div>
+          </div>
+          <div>
+            <div class="text-gray-400 text-xl font-mono mb-2">05</div>
+            <div class="font-bold mb-1 text-lg">I work in systems</div>
+            <div class="text-gray-700 text-base">Whether it's a small feature or an entire design system, I create reusable components for the team.</div>
+          </div>
+          <div>
+            <div class="text-gray-400 text-xl font-mono mb-2">06</div>
+            <div class="font-bold mb-1 text-lg">Design is thinking</div>
+            <div class="text-gray-700 text-base">I am not afraid to throw away an idea and explore divergent solutions. The more the merrier!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
